@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+main{
+    display: grid;
+    grid-template-areas: 'container' 'aside';
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto;
+}
+body{
+    background-color: hsl(221, 100%, 96%);
+    color:white;
+    font-size:16px;
+    min-height: 100vh;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    grid-area: container;
+    background-image: linear-gradient(hsl(252,100%,67%), hsl(241,81%,54%));
+    color:white;
+    max-width:350px;
+    height:60vh;
+    border-radius: 20px;
+}
+.h3{
+    text-align: center;
+    font-size:17px;
+    grid-area: aside;
+    color: hsl(241, 100%, 89%);
+    font-weight: normal;
+    position: relative;
+    top:20px;
+    margin:10px;
+}
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+  background-color: hsla(256, 72%, 46%, 1);
+  width:200px;
+  height:150px;
+  padding:100px;
+  clip-path: circle(40%);  
+}
+.aside{
+    background-color: white;
+    color:hsl(224, 30%, 27%);
+    border-radius:22px;
+    box-shadow:2px 3px 5px hsl(241, 100%, 89%)
+}
+.aside>h3{
+    font-weight: bold;
+    margin:24px;
+}
+img{
+    float: left;
+}
+.box1{
+    background-color: hsl(0, 48%, 94%);
+    border-radius:10px;
+    display: block;
+    padding:14px;
+    margin-bottom:10px;
+}
+.box2{
+    background-color: hsl(39, 68%, 88%);
+    border-radius:13px;
+    display: block;
+    padding:14px;
+    margin-bottom:10px;
+}
+.box3{
+    background-color:hsl(167, 67%, 91%);
+    border-radius: 13px;
+    display: block;
+    padding:14px;
+    margin-bottom:10px;
+}
+.box4{
+    background-color: hsl(232, 45%, 94%);
+    border-radius:12px;
+    display: block;
+    padding:14px;
+}
+.butonas{
+  background-color: hsl(224, 30%, 27%);
+  padding:20px 120px;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 14px;
+  box-shadow: 1px 1px 5px gainsboro;
+  margin:25px;
+  color:white;  
+}
+@media(max-width:760px)
+{
+    body{
+        min-height: 100vh;
+        width:100vg
+    }
+    main{
+        display: grid;
+        grid-template-areas: 'container'
+        'aside';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    .container{
+        grid-area:container;
+    }
+    .aside{
+        grid-area:aside;
+    }
+}
